@@ -1,0 +1,30 @@
+body {
+  font-family: 'Questrial', sans-serif;
+  background-color: #f5f6fa;
+  overflow: auto;
+}
+
+@media (min-width: 768px) {
+  body {
+    overflow: hidden;
+  }
+}
+
+p, a {
+  font-weight: bold;
+  margin: 0;
+}
+
+.books-cards {
+  height: 80vh;
+  overflow-y: scroll;
+}
+
+.books-cards::-webkit-scrollbar {
+}
+
+.books-cards {
+  -ms-overflow-style: none;
+  scrollbar-width: none; 
+}
+
