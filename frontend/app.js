@@ -9,7 +9,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
 document.getElementById('book-form')
   .addEventListener('submit', e => {
-    e.preventDefault();
     const title = document.getElementById('title').value;
     const author = document.getElementById('author').value;
     const description = document.getElementById('description').value;
@@ -34,17 +33,18 @@ document.getElementById('book-form')
       ui.addNewBook(formData);
       ui.renderMessage('New Book Added', 'success', 3000);
     }
+    e.preventDefault();
   })
 
   //Eliminando una libro
  document.getElementById('books-cards')
   .addEventListener('click', e => {
-    e.preventDefault();
     //Si estoy presionando el boton con la clase delete nos da el id
     if (e.target.classList.contains('delete')) {
       const ui = new UI();
       ui.deleteBook(e.target.getAttribute('_id'));
       ui.renderMessage('Book Removed', 'danger', 3000);
     }
+    e.preventDefault();
   });
 
